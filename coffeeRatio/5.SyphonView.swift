@@ -1,7 +1,5 @@
 //  5.SyphonView.swift
 
-//  SyphonView.swift
-
 import SwiftUI
 
 struct SyphonView: View {

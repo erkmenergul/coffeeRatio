@@ -1,7 +1,5 @@
 //  3.AeroPressView.swift
 
-//  AeroPressView.swift
-
 import SwiftUI
 
 struct AeroPressView: View {

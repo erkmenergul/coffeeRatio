@@ -1,7 +1,5 @@
 //  1.FrenchPressView.swift
 
-//  FrenchPressView.swift
-
 import SwiftUI
 
 struct FrenchPressView: View {

@@ -1,7 +1,5 @@
 // 2.PourOverSettingsView.swift
 
-//  PourOverSettingsView.swift
-
 import SwiftUI
 
 struct PourOverSettingsView: View {

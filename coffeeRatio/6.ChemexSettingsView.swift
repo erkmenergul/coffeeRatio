@@ -1,7 +1,5 @@
 //  6.ChemexSettingsView.swift
 
-//  ChemexSettingsView.swift
-
 import SwiftUI
 
 struct ChemexSettingsView: View {

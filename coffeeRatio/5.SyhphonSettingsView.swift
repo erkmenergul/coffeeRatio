@@ -1,7 +1,5 @@
 //  5.SyphonSettingsView.swift
 
-//  SyphonSettingsView.swift
-
 import SwiftUI
 
 struct SyphonSettingsView: View {

@@ -1,7 +1,5 @@
 //  CustomCoffeeRecipeDetailView.swift
 
-//  CustomCoffeeRecipeDetailView.swift
-
 import SwiftUI
 
 struct CustomCoffeeRecipeDetailView: View {

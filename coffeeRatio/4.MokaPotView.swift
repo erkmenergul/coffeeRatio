@@ -1,7 +1,5 @@
 //  4.MokaPotView.swift
 
-//  MokaPotView.swift
-
 import SwiftUI
 
 struct MokaPotView: View {
