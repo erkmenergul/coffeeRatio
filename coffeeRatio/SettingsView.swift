@@ -4,6 +4,8 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var settings: SettingsModel
+    @EnvironmentObject var recipeStore: CustomRecipeStore
+    @State private var showDeleteAlert = false
 
     let languageOptions = ["Türkçe", "İngilizce"]
     let unitOptions     = ["Metric", "Imperial"]
@@ -35,6 +37,13 @@ struct SettingsView: View {
                     }
                 }
 
+                Section(header: Text("Tarifleri Yönet")) {
+                    Button("Kahve Tariflerini Sil") {
+                        showDeleteAlert = true
+                    }
+                    .foregroundColor(.red)
+                }
+
                 Section(header: Text("Hakkında")) {
                     Text("Bu uygulama, çeşitli kahve tarifleri ve demleme yöntemlerini sunar.")
                         .font(.subheadline)
@@ -43,6 +52,16 @@ struct SettingsView: View {
             }
             .navigationTitle("Ayarlar")
             .navigationBarTitleDisplayMode(.inline)
+            .alert(isPresented: $showDeleteAlert) {
+                Alert(
+                    title: Text("Emin misiniz?"),
+                    message: Text("Kendi tariflerinizdeki tüm kahve tarifleri silinecek."),
+                    primaryButton: .destructive(Text("Sil")) {
+                        recipeStore.recipes.removeAll()
+                    },
+                    secondaryButton: .cancel()
+                )
+            }
         }
     }
 }
@@ -51,5 +70,6 @@ struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
             .environmentObject(SettingsModel())
+            .environmentObject(CustomRecipeStore())
     }
 }
