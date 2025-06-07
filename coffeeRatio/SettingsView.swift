@@ -7,8 +7,11 @@ struct SettingsView: View {
     @EnvironmentObject var recipeStore: CustomRecipeStore
     @State private var showDeleteAlert = false
 
-    let languageOptions = ["Türkçe", "İngilizce"]
-    let unitOptions     = ["Metric", "Imperial"]
+    let unitOptions = ["Metric", "Imperial"]
+
+    var appVersion: String {
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "?"
+    }
 
     var body: some View {
         NavigationView {
@@ -18,15 +21,7 @@ struct SettingsView: View {
                     Toggle("Bildirimler", isOn: $settings.notificationsEnabled)
                 }
 
-                Section(header: Text("Dil ve Birim")) {
-                    HStack {
-                        Text("Dil:")
-                        Spacer()
-                        Picker("", selection: $settings.selectedLanguage) {
-                            ForEach(languageOptions, id: \.self) { Text($0) }
-                        }
-                        .pickerStyle(SegmentedPickerStyle())
-                    }
+                Section(header: Text("Birim")) {
                     HStack {
                         Text("Birim:")
                         Spacer()
@@ -45,9 +40,16 @@ struct SettingsView: View {
                 }
 
                 Section(header: Text("Hakkında")) {
-                    Text("Bu uygulama, çeşitli kahve tarifleri ve demleme yöntemlerini sunar.")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Bu uygulama, çeşitli kahve tarifleri ve demleme yöntemlerini öğrenmenizi,kaydetmenizi sağlar.")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        // Versiyon satırı eklendi:
+                        Text("Sürüm: \(appVersion)")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                            .padding(.top, 4)
+                    }
                 }
             }
             .navigationTitle("Ayarlar")

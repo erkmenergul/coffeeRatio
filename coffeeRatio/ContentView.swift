@@ -19,7 +19,8 @@ extension CoffeeRecipe {
         case "Pour Over (V60)": return "pourOver"      // Assets: "pourOver"
         case "AeroPress": return "aeroPress"           // Assets: "aeroPress"
         case "Moka Pot": return "mokaPot"              // Assets: "mokaPot"
-        case "Türk Kahvesi": return "turkKahvesi"      // Assets: "turkKahvesi"
+        case "Türk Kahvesi", "Turkish Coffee":
+                return "turkKahvesi"      // Assets: "turkKahvesi"
         case "Americano": return "americano"           // Assets: "americano"
         case "Latte": return "latte"                   // Assets: "latte"
         case "Cappuccino": return "cappuccino"         // Assets: "cappuccino"
@@ -34,7 +35,8 @@ extension CoffeeRecipe {
         case "Caramel Macchiato": return "caramelMacchiato"  // Assets: "caramelMacchiato"
         case "Syphon": return "syphon"                 // Assets: "syphon"
         case "Chemex": return "chemex"                 // Assets: "chemex"
-        case "Filtre Kahve": return "filtreKahve"       // Assets: "filtreKahve"
+        case "Filtre Kahve", "Filter Coffee":
+                return "filtreKahve"       // Assets: "filtreKahve"
         default: return "defaultCoffee"
         }
     }
@@ -45,7 +47,8 @@ extension CoffeeRecipe {
         case "Ristretto": return 10
         case "Espresso": return 9
         case "Espresso Macchiato": return 9
-        case "Türk Kahvesi": return 8
+        case "Türk Kahvesi", "Turkish Coffee":
+                return 8
         case "Marocchino": return 8
         case "Cortado": return 8
         case "French Press": return 7
@@ -56,7 +59,8 @@ extension CoffeeRecipe {
         case "Chemex": return 7
         case "Flat White": return 6
         case "Americano": return 5
-        case "Filtre Kahve": return 5
+        case "Filtre Kahve", "Filter Coffee":
+            return 5
         case "Latte": return 4
         case "Cappuccino": return 4
         case "Latte Macchiato": return 3
@@ -73,8 +77,8 @@ let coffeeRecipes: [CoffeeRecipe] = [
         name: "Espresso",
         coffeeAmount: "18gr",
         waterAmount: "36ml",
-        brewTime: "25-30 saniye",
-        instructions: "Kahveyi ince kalınlıkta öğütün. 18gr kahveyi makinenizin portafiltresine yerleştirin ve 25-30 saniyede 36ml espresso elde edin."
+        brewTime: NSLocalizedString("espresso_brew_time", comment: ""),
+        instructions: NSLocalizedString("espresso_instructions", comment: "")
     ),
     CoffeeRecipe(
         name: "French Press",
@@ -105,96 +109,96 @@ let coffeeRecipes: [CoffeeRecipe] = [
         instructions: "Alt haznede vida hizasına kadar sıcak su koyun.Orta kalınlıkta öğütülmüş 14gr kahveyi MokaPotun kahve haznesine koyun.Kısık ateşte yaklaşık 4-6 dakika bekleyin.Kahvenin üst kısma tamamen çıkmasını bekleyin."
     ),
     CoffeeRecipe(
-        name: "Türk Kahvesi",
+        name: NSLocalizedString("turkish_coffee_name", comment: ""),
         coffeeAmount: "7gr",
         waterAmount: "70ml",
-        brewTime: "3-5 dakika",
-        instructions: "İnce öğütülmüş 7gr kahveyi cezveye koyun, 70ml su (isteğe bağlı şeker) ekleyin. Kısık ateşte yavaşça pişirin ve karıştırmayın.Köpük oluşunca cezveyi ocaktan alın."
+        brewTime: NSLocalizedString("turkish_coffee_brew_time", comment: ""),
+        instructions: NSLocalizedString("turkish_coffee_instructions", comment: "")
     ),
     CoffeeRecipe(
         name: "Americano",
         coffeeAmount: "18gr",
-        waterAmount: "36ml espresso,90ml su",
-        brewTime: "Espresso: 25-30 saniye",
-        instructions: "Öncelikle 18gr kahveden 36ml espresso elde edin.Ardından 90ml sıcak su ekleyerek Americano hazırlayın.İstediğiniz sertlik oranına göre ekleyeceğiniz su oranını ayarlayın."
+        waterAmount: NSLocalizedString("americano_water_amount", comment: ""),
+        brewTime: NSLocalizedString("americano_brew_time", comment: ""),
+        instructions: NSLocalizedString("americano_instructions", comment: "")
     ),
     CoffeeRecipe(
         name: "Latte",
         coffeeAmount: "18gr",
-        waterAmount: "36ml espresso,180ml süt/süt kreması",
-        brewTime: "Espresso: 25-30 saniye",
-        instructions: "18gr kahveden 36ml espresso elde edin.180ml ısıtılmış sütü veya buhar çubuğuyla hazırladığınız süt kremasını ekleyerek hazırlayın."
+        waterAmount: NSLocalizedString("latte_water_amount", comment: ""),
+        brewTime: NSLocalizedString("latte_brew_time", comment: ""),
+        instructions: NSLocalizedString("latte_instructions", comment: "")
     ),
     CoffeeRecipe(
         name: "Cappuccino",
         coffeeAmount: "18gr",
-        waterAmount: "36ml espresso,50ml süt,50ml süt köpüğü",
-        brewTime: "Espresso: 25-30 saniye",
-        instructions: "18gr kahveden 36ml espresso elde edin.Eşit oranlarda 50ml ısıtılmış süt ve süt köpüğünü ekleyerek hazırlayın."
+        waterAmount: NSLocalizedString("cappuccino_water_amount", comment: ""),
+        brewTime: NSLocalizedString("cappuccino_brew_time", comment: ""),
+        instructions: NSLocalizedString("cappuccino_instructions", comment: "")
     ),
     CoffeeRecipe(
         name: "Espresso Macchiato",
         coffeeAmount: "18gr",
-        waterAmount: "36ml espresso",
-        brewTime: "Espresso: 25-30 saniye",
-        instructions: "18gr kahveden 36ml espresso elde edin. Üzerine az miktarda(1-2 kaşık) süt köpüğü ekleyerek espresso macchiato hazırlayın."
+        waterAmount: NSLocalizedString("espresso_macchiato_water_amount", comment: ""),
+        brewTime: NSLocalizedString("espresso_macchiato_brew_time", comment: ""),
+        instructions: NSLocalizedString("espresso_macchiato_instructions", comment: "")
     ),
     CoffeeRecipe(
         name: "Latte Macchiato",
         coffeeAmount: "18gr",
-        waterAmount: "36ml espresso, 200ml süt(bol köpük)",
-        brewTime: "Espresso: 25-30 saniye",
-        instructions: "Büyük bir bardağa 200ml ısıtılmış süt dökün, ardından yavaşça espresso ekleyerek latte macchiato hazırlayın. Katmanlar belirgin olacaktır."
+        waterAmount: NSLocalizedString("latte_macchiato_water_amount", comment: ""),
+        brewTime: NSLocalizedString("latte_macchiato_brew_time", comment: ""),
+        instructions: NSLocalizedString("latte_macchiato_instructions", comment: "")
     ),
     CoffeeRecipe(
         name: "Mocha",
         coffeeAmount: "18gr",
-        waterAmount: "36ml espresso, 150ml süt",
-        brewTime: "Espresso: 25-30 saniye",
-        instructions: "18gr kahveden 36ml espresso elde edin.Espressoya 20gr çikolata şurubu ya da eritilmiş çikolata ekleyin, ardından 150ml ısıtılmış süt ilave edin. İsteğe bağlı süt kreması ekleyin."
+        waterAmount: NSLocalizedString("mocha_water_amount", comment: ""),
+        brewTime: NSLocalizedString("mocha_brew_time", comment: ""),
+        instructions: NSLocalizedString("mocha_instructions", comment: "")
     ),
     CoffeeRecipe(
         name: "Cortado",
         coffeeAmount: "18gr",
-        waterAmount: "36ml espresso,36ml süt",
-        brewTime: "Espresso: 25-30 saniye",
-        instructions: "18gr kahveden 36ml espresso elde edin.Ardından 36ml ısıtılmış süt ekleyerek  hazırlayın."
+        waterAmount: NSLocalizedString("cortado_water_amount", comment: ""),
+        brewTime: NSLocalizedString("cortado_brew_time", comment: ""),
+        instructions: NSLocalizedString("cortado_instructions", comment: "")
     ),
     CoffeeRecipe(
         name: "Flat White",
         coffeeAmount: "18gr",
-        waterAmount: "36ml espresso,120ml süt",
-        brewTime: "Espresso: 25-30 saniye",
-        instructions: "18gr kahveden 36ml espresso elde edin. Ardından 120ml ısıtılmış süt ekleyerek  hazırlayın."
+        waterAmount: NSLocalizedString("flat_white_water_amount", comment: ""),
+        brewTime: NSLocalizedString("flat_white_brew_time", comment: ""),
+        instructions: NSLocalizedString("flat_white_instructions", comment: "")
     ),
     CoffeeRecipe(
         name: "Ristretto",
         coffeeAmount: "18gr",
-        waterAmount: "20ml",
-        brewTime: "20-25 saniye",
-        instructions: "18gr kahveden, normal espressoya göre daha az su kullanarak 20ml ristretto elde edin. Daha yoğun ve aromatik bir shot..."
+        waterAmount: NSLocalizedString("ristretto_water_amount", comment: ""),
+        brewTime: NSLocalizedString("ristretto_brew_time", comment: ""),
+        instructions: NSLocalizedString("ristretto_instructions", comment: "")
     ),
     // Yeni Kahve Çeşitleri:
     CoffeeRecipe(
         name: "Marocchino",
         coffeeAmount: "18gr",
-        waterAmount: "36ml espresso,20ml süt köpüğü",
-        brewTime: "25-30 saniye",
-        instructions: "Bardağın tabanına sıcak çikolata ya da kakao ekleyin.Üzerine espresso ve ince bir süt köpüğü ekleyin.İsteğe bağlı en üste rendelenmiş çikolata ekleyebilirsiniz."
+        waterAmount: NSLocalizedString("marocchino_water_amount", comment: ""),
+        brewTime: NSLocalizedString("marocchino_brew_time", comment: ""),
+        instructions: NSLocalizedString("marocchino_instructions", comment: "")
     ),
     CoffeeRecipe(
         name: "Affogato",
         coffeeAmount: "18gr",
-        waterAmount: "36ml",
-        brewTime: "25-30 saniye",
-        instructions: "Bir top vanilyalı dondurmanın üzerine sıcak espressoyu dökün."
+        waterAmount: NSLocalizedString("affogato_water_amount", comment: ""),
+        brewTime: NSLocalizedString("affogato_brew_time", comment: ""),
+        instructions: NSLocalizedString("affogato_instructions", comment: "")
     ),
     CoffeeRecipe(
         name: "Caramel Macchiato",
         coffeeAmount: "18gr",
-        waterAmount: "36ml espresso,150ml süt",
-        brewTime: "Espresso: 25-30 saniye",
-        instructions: "Bardağın tabanına karamelli sos ekleyin.Isıtılmış süt/süt köpüğünü ve espressoyu üzerine dökün.Üzerini karamel sos ile süsleyin."
+        waterAmount: NSLocalizedString("caramel_macchiato_water_amount", comment: ""),
+        brewTime: NSLocalizedString("caramel_macchiato_brew_time", comment: ""),
+        instructions: NSLocalizedString("caramel_macchiato_instructions", comment: "")
     ),
     // Yeni Kahve Demleme Yöntemleri:
     CoffeeRecipe(
@@ -212,12 +216,12 @@ let coffeeRecipes: [CoffeeRecipe] = [
         instructions: "Önce kağıt filtreyi koyun, su ile yıkayın ve suyu boşaltın.Orta kalınlıkta öğütülmüş 22gr kahveyi filtreye yerleştirin. Suyu yavaşça ve dairesel hareketlerle dökmeye başlayın.2 ya da 3 kişilik yapmak isterseniz kahve miktarının 15 katı kadar su ilave edin."
     ),
     CoffeeRecipe(
-        name: "Filtre Kahve",
+        name: NSLocalizedString("filter_coffee_name", comment: ""),
         coffeeAmount: "15gr",
         waterAmount: "225ml",
-        brewTime: "5-8 dakika",
-        instructions: "Orta kalınlıkta öğütülmüş 15gr kahveyi filtreye koyun.Makinenizi çalıştırın.2 ya da 3 kişilik yapmak isterseniz kahve miktarının yaklaşık 15 katı kadar su ilave edin."
-        )
+        brewTime: NSLocalizedString("filter_coffee_brew_time", comment: ""),
+        instructions: NSLocalizedString("filter_coffee_instructions", comment: "")
+    )
 ]
 
 

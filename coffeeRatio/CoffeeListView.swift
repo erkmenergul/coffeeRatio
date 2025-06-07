@@ -6,7 +6,23 @@ struct CoffeeListView: View {
     // Sadece kahve çeşitlerini listeleyen filtre
     var coffeeTypes: [CoffeeRecipe] {
         return coffeeRecipes.filter { recipe in
-            ["Americano", "Latte", "Cappuccino", "Espresso Macchiato", "Latte Macchiato", "Mocha", "Cortado", "Flat White", "Türk Kahvesi", "Ristretto", "Marocchino", "Affogato", "Caramel Macchiato", "Filtre Kahve", "Espresso"].contains(recipe.name)
+            [
+                "Americano",
+                "Latte",
+                "Cappuccino",
+                "Espresso Macchiato",
+                "Latte Macchiato",
+                "Mocha",
+                "Cortado",
+                "Flat White",
+                "Türk Kahvesi", "Turkish Coffee",    // Her iki dilde!
+                "Ristretto",
+                "Marocchino",
+                "Affogato",
+                "Caramel Macchiato",
+                "Filtre Kahve", "Filter Coffee",      // Her iki dilde!
+                "Espresso"
+            ].contains(recipe.name)
         }.sorted { $0.name < $1.name }
     }
     

@@ -45,15 +45,29 @@ struct SyphonView: View {
         if settings.selectedUnit == "Imperial" {
             let coffeeOz = String(format: "%.2f", UnitConverter.gramsToOunces(Double(coffeeAmountManual)))
             let waterOz  = String(format: "%.2f", UnitConverter.millilitersToFluidOunces(Double(waterAmountManual)))
-            return """
-                   Syphonun alt kısmını \(waterOz) fl oz sıcak suyla doldurun. Üst bölümü ve filtreyi yerleştirin. \
-                   Orta kalınlıkta öğütülmüş \(coffeeOz) oz kahveyi üst kısma koyun. Yaklaşık \(brewMin) dakika suyun tamamen üst kısma çıkmasını bekleyin. Isıtıcıyı kapatın ve kahvenin alt hazneye inmesini bekleyin.
-                   """
+            if Locale.current.languageCode == "tr" {
+                return """
+                       Syphonun alt kısmını \(waterOz) fl oz sıcak suyla doldurun. Üst bölümü ve filtreyi yerleştirin. \
+                       Orta kalınlıkta öğütülmüş \(coffeeOz) oz kahveyi üst kısma koyun. Yaklaşık \(brewMin) dakika suyun tamamen üst kısma çıkmasını bekleyin. Isıtıcıyı kapatın ve kahvenin alt hazneye inmesini bekleyin.
+                       """
+            } else {
+                return """
+                       Fill the lower part of the syphon with \(waterOz) fl oz of hot water. Place the upper chamber and filter. \
+                       Add \(coffeeOz) oz of medium-ground coffee to the upper chamber. Wait about \(brewMin) minutes for all the water to rise. Turn off the heater and wait for the coffee to flow down to the lower chamber.
+                       """
+            }
         } else {
-            return """
-                   Syphonun alt kısmını \(waterAmountManual)ml sıcak suyla doldurun. Üst bölümü ve filtreyi yerleştirin. \
-                   Orta kalınlıkta öğütülmüş \(coffeeAmountManual)g kahveyi üst kısma koyun. Yaklaşık \(brewMin) dakika suyun tamamen üst kısma çıkmasını bekleyin. Isıtıcıyı kapatın ve kahvenin alt hazneye inmesini bekleyin.
-                   """
+            if Locale.current.languageCode == "tr" {
+                return """
+                       Syphonun alt kısmını \(waterAmountManual)ml sıcak suyla doldurun. Üst bölümü ve filtreyi yerleştirin. \
+                       Orta kalınlıkta öğütülmüş \(coffeeAmountManual)g kahveyi üst kısma koyun. Yaklaşık \(brewMin) dakika suyun tamamen üst kısma çıkmasını bekleyin. Isıtıcıyı kapatın ve kahvenin alt hazneye inmesini bekleyin.
+                       """
+            } else {
+                return """
+                       Fill the lower part of the syphon with \(waterAmountManual)ml of hot water. Place the upper chamber and filter. \
+                       Add \(coffeeAmountManual)g of medium-ground coffee to the upper chamber. Wait about \(brewMin) minutes for all the water to rise. Turn off the heater and wait for the coffee to flow down to the lower chamber.
+                       """
+            }
         }
     }
 

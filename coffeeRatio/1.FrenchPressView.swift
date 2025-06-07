@@ -42,19 +42,25 @@ struct FrenchPressView: View {
         if settings.selectedUnit == "Imperial" {
             let coffeeOz = String(format: "%.2f", UnitConverter.gramsToOunces(Double(coffeeAmountManual)))
             let waterOz = String(format: "%.2f", UnitConverter.millilitersToFluidOunces(Double(waterAmountManual)))
-            return """
-                   French Pressi sıcak su ile ısıtın. Orta kalınlıkta öğütülmüş \
-                   \(coffeeOz) oz kahveyi koyun. Üzerine \(waterOz) fl oz sıcak \
-                   suyu yavaş yavaş dökün. \(brewMinutes) dakika bekleyin ve \
-                   ardından pistonu yavaş yavaş aşağı itin.
-                   """
+            if Locale.current.languageCode == "tr" {
+                return """
+                       French Pressi sıcak su ile ısıtın. Orta kalınlıkta öğütülmüş \(coffeeOz) oz kahveyi koyun. Üzerine \(waterOz) fl oz sıcak suyu yavaş yavaş dökün. \(brewMinutes) dakika bekleyin ve ardından pistonu yavaşça aşağı itin.
+                       """
+            } else {
+                return """
+                       Heat the French Press with hot water. Add \(coffeeOz) oz of medium-ground coffee. Slowly pour \(waterOz) fl oz of hot water. Wait for \(brewMinutes) minutes, then slowly press the plunger down.
+                       """
+            }
         } else {
-            return """
-                   French Pressi sıcak su ile ısıtın. Orta kalınlıkta öğütülmüş \
-                   \(coffeeAmountManual)g kahveyi koyun. Üzerine \(waterAmountManual)ml \
-                   sıcak suyu yavaş yavaş dökün. \(brewMinutes) dakika bekleyin ve \
-                   ardından pistonu yavaş yavaş aşağı itin.
-                   """
+            if Locale.current.languageCode == "tr" {
+                return """
+                       French Pressi sıcak su ile ısıtın. Orta kalınlıkta öğütülmüş \(coffeeAmountManual)g kahveyi koyun. Üzerine \(waterAmountManual)ml sıcak suyu yavaş yavaş dökün. \(brewMinutes) dakika bekleyin ve ardından pistonu yavaşça aşağı itin.
+                       """
+            } else {
+                return """
+                       Heat the French Press with hot water. Add \(coffeeAmountManual)g of medium-ground coffee. Slowly pour \(waterAmountManual)ml of hot water. Wait for \(brewMinutes) minutes, then slowly press the plunger down.
+                       """
+            }
         }
     }
 

@@ -47,9 +47,17 @@ struct AeroPressView: View {
         if settings.selectedUnit == "Imperial" {
             let coffeeOz = String(format: "%.2f", UnitConverter.gramsToOunces(Double(coffeeAmountManual)))
             let waterOz  = String(format: "%.2f", UnitConverter.millilitersToFluidOunces(Double(waterAmountManual)))
-            return "Aeropressi ters çevirin ve orta kalınlıkta öğütülmüş \(coffeeOz) oz kahveyi kullanın. Üzerine \(waterOz) fl oz sıcak su ekleyin. Yaklaşık \(brewString) dk demlendikten sonra ters çevirip bardağa bastırın."
+            if Locale.current.languageCode == "tr" {
+                return "Aeropressi ters çevirin ve orta kalınlıkta öğütülmüş \(coffeeOz) oz kahveyi kullanın. Üzerine \(waterOz) fl oz sıcak su ekleyin. Yaklaşık \(brewString) dk demlendikten sonra ters çevirip bardağa bastırın.İsteğe göre sıcak su ekleyin."
+            } else {
+                return "Flip the AeroPress upside down and use \(coffeeOz) oz of medium-ground coffee. Add \(waterOz) fl oz of hot water. After brewing for about \(brewString) min, flip and press into the cup.Add hot water as desired."
+            }
         } else {
-            return "Aeropressi ters çevirin ve orta kalınlıkta öğütülmüş \(coffeeAmountManual)g kahveyi kullanın. Üzerine \(waterAmountManual)ml sıcak su ekleyin. Yaklaşık \(brewString) dk demlendikten sonra ters çevirip bardağa bastırın."
+            if Locale.current.languageCode == "tr" {
+                return "Aeropressi ters çevirin ve orta kalınlıkta öğütülmüş \(coffeeAmountManual)g kahveyi kullanın. Üzerine \(waterAmountManual)ml sıcak su ekleyin. Yaklaşık \(brewString) dk demlendikten sonra ters çevirip bardağa bastırın.İsteğe göre sıcak su ekleyin."
+            } else {
+                return "Flip the AeroPress upside down and use \(coffeeAmountManual)g of medium-ground coffee. Add \(waterAmountManual)ml of hot water. After brewing for about \(brewString) min, flip and press into the cup.Add hot water as desired."
+            }
         }
     }
 

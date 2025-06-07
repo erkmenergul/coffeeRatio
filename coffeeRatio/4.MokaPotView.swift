@@ -42,17 +42,33 @@ struct MokaPotView: View {
         if settings.selectedUnit == "Imperial" {
             let coffeeOz = String(format: "%.2f", UnitConverter.gramsToOunces(Double(coffeeAmountManual)))
             let waterOz  = String(format: "%.2f", UnitConverter.millilitersToFluidOunces(Double(waterAmountManual)))
-            return """
-                   Alt haznede vida hizasına kadar \(waterOz) fl oz sıcak su koyun. \
-                   Orta kalınlıkta öğütülmüş \(coffeeOz) oz kahveyi hazneye koyun. \
-                   Kısık ateşte yaklaşık \(brewMin) dakika demlendikten sonra ocaktan alın.
-                   """
+            if Locale.current.languageCode == "tr" {
+                return """
+                       Alt haznede vida hizasına kadar \(waterOz) fl oz sıcak su koyun. \
+                       Orta kalınlıkta öğütülmüş \(coffeeOz) oz kahveyi hazneye koyun. \
+                       Kısık ateşte yaklaşık \(brewMin) dakika demlendikten sonra ocaktan alın.
+                       """
+            } else {
+                return """
+                       Pour \(waterOz) fl oz of hot water into the bottom chamber up to the screw level. \
+                       Put \(coffeeOz) oz of medium-ground coffee in the funnel. \
+                       Brew over low heat for about \(brewMin) minutes, then remove from heat.
+                       """
+            }
         } else {
-            return """
-                   Alt haznede vida hizasına kadar \(waterAmountManual)ml sıcak su koyun. \
-                   Orta kalınlıkta öğütülmüş \(coffeeAmountManual)g kahveyi hazneye koyun. \
-                   Kısık ateşte yaklaşık \(brewMin) dakika demlendikten sonra ocaktan alın.
-                   """
+            if Locale.current.languageCode == "tr" {
+                return """
+                       Alt haznede vida hizasına kadar \(waterAmountManual)ml sıcak su koyun. \
+                       Orta kalınlıkta öğütülmüş \(coffeeAmountManual)g kahveyi hazneye koyun. \
+                       Kısık ateşte yaklaşık \(brewMin) dakika demlendikten sonra ocaktan alın.
+                       """
+            } else {
+                return """
+                       Pour \(waterAmountManual)ml of hot water into the bottom chamber up to the screw level. \
+                       Put \(coffeeAmountManual)g of medium-ground coffee in the funnel. \
+                       Brew over low heat for about \(brewMin) minutes, then remove from heat.
+                       """
+            }
         }
     }
 

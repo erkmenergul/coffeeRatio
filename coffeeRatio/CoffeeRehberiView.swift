@@ -9,16 +9,16 @@ struct CoffeeRehberiView: View {
             "Ristretto",
             "Espresso",
             "Espresso Macchiato",
-            "Türk Kahvesi",
+            "Türk Kahvesi", "Turkish Coffee",      // Ekledik
             "Americano",
-            "Filtre Kahve",
+            "Filtre Kahve", "Filter Coffee",       // Ekledik
             "Cortado",
             "Marocchino",
             "Affogato",
             "Caramel Macchiato",
             "Flat White",
             "Latte",
-            "Cappuccino",  // Dikkat: "Cappuccino" olarak yazılmalı
+            "Cappuccino",
             "Mocha",
             "Latte Macchiato"
         ]

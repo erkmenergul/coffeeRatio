@@ -43,20 +43,27 @@ struct PourOverView: View {
         if settings.selectedUnit == "Imperial" {
             let coffeeOz = String(format: "%.2f", UnitConverter.gramsToOunces(Double(coffeeAmountManual)))
             let waterOz = String(format: "%.2f", UnitConverter.millilitersToFluidOunces(Double(waterAmountManual)))
-            return """
-                   Önce kağıt filtreyi koyun, su ile yıkayın ve suyu boşaltın. Orta kalınlıkta öğütülmüş \
-                   \(coffeeOz) oz kahveyi filtreye koyun. Üzerine \(waterOz) fl oz sıcak suyu dairesel hareketlerle dökün \
-                   ve yaklaşık \(brewMin) dakika demleyin.
-                   """
+            if Locale.current.languageCode == "tr" {
+                return """
+                       Önce kağıt filtreyi koyun, su ile yıkayın ve suyu boşaltın. Orta kalınlıkta öğütülmüş \(coffeeOz) oz kahveyi filtreye koyun. Üzerine \(waterOz) fl oz sıcak suyu dairesel hareketlerle dökün ve yaklaşık \(brewMin) dakika demleyin.
+                       """
+            } else {
+                return """
+                       First, place the paper filter, rinse it with water and discard the water. Put \(coffeeOz) oz of medium-ground coffee in the filter. Pour \(waterOz) fl oz of hot water in a circular motion and brew for about \(brewMin) minutes.
+                       """
+            }
         } else {
-            return """
-                   Önce kağıt filtreyi koyun, su ile yıkayın ve suyu boşaltın. Orta kalınlıkta öğütülmüş \
-                   \(coffeeAmountManual)g kahveyi filtreye koyun. Üzerine \(waterAmountManual)ml sıcak suyu dairesel hareketlerle dökün \
-                   ve yaklaşık \(brewMin) dakika demleyin.
-                   """
+            if Locale.current.languageCode == "tr" {
+                return """
+                       Önce kağıt filtreyi koyun, su ile yıkayın ve suyu boşaltın. Orta kalınlıkta öğütülmüş \(coffeeAmountManual)g kahveyi filtreye koyun. Üzerine \(waterAmountManual)ml sıcak suyu dairesel hareketlerle dökün ve yaklaşık \(brewMin) dakika demleyin.
+                       """
+            } else {
+                return """
+                       First, place the paper filter, rinse it with water and discard the water. Put \(coffeeAmountManual)g of medium-ground coffee in the filter. Pour \(waterAmountManual)ml of hot water in a circular motion and brew for about \(brewMin) minutes.
+                       """
+            }
         }
     }
-
     private func timeString(from time: TimeInterval) -> String {
         let m = Int(time) / 60, s = Int(time) % 60
         return String(format: "%02d:%02d", m, s)

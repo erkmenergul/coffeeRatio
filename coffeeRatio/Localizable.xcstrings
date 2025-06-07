@@ -1,7 +1,1619 @@
 {
-  "sourceLanguage" : "en",
+  "sourceLanguage" : "tr",
   "strings" : {
+    "" : {
 
+    },
+    "%@ fl oz" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ fl oz"
+          }
+        }
+      }
+    },
+    "%@ oz" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ oz"
+          }
+        }
+      }
+    },
+    "%lld g" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld g"
+          }
+        }
+      }
+    },
+    "%lld ml" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ml"
+          }
+        }
+      }
+    },
+    "%lld%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld%2$@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld%2$@"
+          }
+        }
+      }
+    },
+    "%lld°C" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld°C"
+          }
+        }
+      }
+    },
+    "%lld°F" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld°F"
+          }
+        }
+      }
+    },
+    "1/10" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1/10"
+          }
+        }
+      }
+    },
+    "1/11" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1/11"
+          }
+        }
+      }
+    },
+    "1/12" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1/12"
+          }
+        }
+      }
+    },
+    "1/13" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1/13"
+          }
+        }
+      }
+    },
+    "1/14" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1/14"
+          }
+        }
+      }
+    },
+    "1/15" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1/15"
+          }
+        }
+      }
+    },
+    "1/16" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1/16"
+          }
+        }
+      }
+    },
+    "AeroPress Ayarları" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AeroPress Settings"
+          }
+        }
+      }
+    },
+    "affogato_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25-30 seconds"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25-30 saniye"
+          }
+        }
+      }
+    },
+    "affogato_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pour hot espresso over a scoop of vanilla ice cream."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bir top vanilyalı dondurmanın üzerine sıcak espressoyu dökün."
+          }
+        }
+      }
+    },
+    "affogato_water_amount" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36 ml"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml"
+          }
+        }
+      }
+    },
+    "americano_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25-30 seconds"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25-30 saniye"
+          }
+        }
+      }
+    },
+    "americano_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "First, extract 36ml espresso from 18g coffee. Then add 90ml of hot water to prepare an Americano. Adjust the amount of added water according to your preferred strength."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öncelikle 18gr kahveden 36ml espresso elde edin. Ardından 90ml sıcak su ekleyerek Americano hazırlayın. İstediğiniz sertlik oranına göre ekleyeceğiniz su oranını ayarlayın."
+          }
+        }
+      }
+    },
+    "americano_water_amount" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso, 90ml water"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso, 90ml su"
+          }
+        }
+      }
+    },
+    "Ayarlar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "Bardak" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cup"
+          }
+        }
+      }
+    },
+    "Bardak: %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cup:%lld"
+          }
+        }
+      }
+    },
+    "Başlat" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
+        }
+      }
+    },
+    "Bildirimler" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications"
+          }
+        }
+      }
+    },
+    "Birim" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unit"
+          }
+        }
+      }
+    },
+    "Birim:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unit:"
+          }
+        }
+      }
+    },
+    "Bu Tarifi Kaydet" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save This  Recipe"
+          }
+        }
+      }
+    },
+    "Bu tarifi silmek istediğinizden emin misiniz?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to delete this recipe?"
+          }
+        }
+      }
+    },
+    "Bu uygulama, çeşitli kahve tarifleri ve demleme yöntemlerini öğrenmenizi,kaydetmenizi sağlar." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app allows you to learn and save various coffee recipes and brewing methods."
+          }
+        }
+      }
+    },
+    "cappuccino_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 seconds"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 saniye"
+          }
+        }
+      }
+    },
+    "cappuccino_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extract 36ml espresso from 18g coffee. Add 50ml heated milk and 50ml milk foam in equal amounts to prepare."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "18gr kahveden 36ml espresso elde edin. Eşit oranlarda 50ml ısıtılmış süt ve süt köpüğünü ekleyerek hazırlayın."
+          }
+        }
+      }
+    },
+    "cappuccino_water_amount" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso, 50ml milk, 50ml milk foam"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso,50ml süt,50ml süt köpüğü"
+          }
+        }
+      }
+    },
+    "caramel_macchiato_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 seconds"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 saniye"
+          }
+        }
+      }
+    },
+    "caramel_macchiato_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add caramel sauce to the bottom of the glass. Pour heated milk/milk foam and espresso over it. Top with caramel sauce."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bardağın tabanına karamelli sos ekleyin. Isıtılmış süt/süt köpüğünü ve espressoyu üzerine dökün. Üzerini karamel sos ile süsleyin."
+          }
+        }
+      }
+    },
+    "caramel_macchiato_water_amount" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso, 150ml milk"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso,150ml süt"
+          }
+        }
+      }
+    },
+    "Chemex Ayarları" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chemex Settings"
+          }
+        }
+      }
+    },
+    "cortado_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 seconds"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 saniye"
+          }
+        }
+      }
+    },
+    "cortado_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extract 36ml espresso from 18g coffee. Then add 36ml heated milk to prepare."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "18gr kahveden 36ml espresso elde edin. Ardından 36ml ısıtılmış süt ekleyerek hazırlayın."
+          }
+        }
+      }
+    },
+    "cortado_water_amount" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso, 36ml milk"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso,36ml süt"
+          }
+        }
+      }
+    },
+    "Demleme Süresi" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brewing Time"
+          }
+        }
+      }
+    },
+    "Demleme Süresi: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brewing Time %@"
+          }
+        }
+      }
+    },
+    "Demleme Yöntemleri" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brewing Methods"
+          }
+        }
+      }
+    },
+    "Devam et" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        }
+      }
+    },
+    "Durdur" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop"
+          }
+        }
+      }
+    },
+    "Düzenle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
+          }
+        }
+      }
+    },
+    "Emin misiniz?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure?"
+          }
+        }
+      }
+    },
+    "espresso_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25-30 seconds"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25-30 saniye"
+          }
+        }
+      }
+    },
+    "espresso_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grind the coffee to a fine thickness. Place 18gr of coffee into the portafilter of your machine and extract 36ml of espresso in 25-30 seconds."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kahveyi ince kalınlıkta öğütün. 18gr kahveyi makinenizin portafiltresine yerleştirin ve 25-30 saniyede 36ml espresso elde edin."
+          }
+        }
+      }
+    },
+    "espresso_macchiato_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 seconds"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 saniye"
+          }
+        }
+      }
+    },
+    "espresso_macchiato_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extract 36ml espresso from 18g coffee. Add a small amount (1-2 spoons) of milk foam on top to prepare an espresso macchiato."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "18gr kahveden 36ml espresso elde edin. Üzerine az miktarda (1-2 kaşık) süt köpüğü ekleyerek espresso macchiato hazırlayın."
+          }
+        }
+      }
+    },
+    "espresso_macchiato_water_amount" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso"
+          }
+        }
+      }
+    },
+    "filter_coffee_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5-8 minutes"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5-8 dakika"
+          }
+        }
+      }
+    },
+    "filter_coffee_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Place 15g of medium-ground coffee in the filter. Start your coffee maker. For 2 or 3 servings, add about 15 times the amount of water to coffee."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orta kalınlıkta öğütülmüş 15gr kahveyi filtreye koyun. Makinenizi çalıştırın. 2 ya da 3 kişilik yapmak isterseniz kahve miktarının yaklaşık 15 katı kadar su ilave edin."
+          }
+        }
+      }
+    },
+    "filter_coffee_name" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter Coffee"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtre Kahve"
+          }
+        }
+      }
+    },
+    "flat_white_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 seconds"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 saniye"
+          }
+        }
+      }
+    },
+    "flat_white_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extract 36ml espresso from 18g coffee. Then add 120ml heated milk to prepare."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "18gr kahveden 36ml espresso elde edin. Ardından 120ml ısıtılmış süt ekleyerek hazırlayın."
+          }
+        }
+      }
+    },
+    "flat_white_water_amount" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso, 120ml milk"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso,120ml süt"
+          }
+        }
+      }
+    },
+    "French Press Ayarları" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "French Press Settings"
+          }
+        }
+      }
+    },
+    "Genel Ayarlar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General Settings"
+          }
+        }
+      }
+    },
+    "Genel Tarifler" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General Recipes"
+          }
+        }
+      }
+    },
+    "Geri" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        }
+      }
+    },
+    "Geri Sayım:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timers:"
+          }
+        }
+      }
+    },
+    "gr" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "gr"
+          }
+        }
+      }
+    },
+    "Hakkında" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        }
+      }
+    },
+    "İptal" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "İşlem Adımları:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steps:"
+          }
+        }
+      }
+    },
+    "Kahve & Su" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coffee & Water"
+          }
+        }
+      }
+    },
+    "Kahve Miktarı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coffee Amount"
+          }
+        }
+      }
+    },
+    "Kahve Miktarı (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coffee Amount (%@)"
+          }
+        }
+      }
+    },
+    "Kahve Rehberi" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coffee Guide"
+          }
+        }
+      }
+    },
+    "Kahve Tariflerini Sil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Coffee Recipes"
+          }
+        }
+      }
+    },
+    "Kahve:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coffee:"
+          }
+        }
+      }
+    },
+    "Kahve: %@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coffee: %1$@ %2$@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Kahve: %1$@ %2$@"
+          }
+        }
+      }
+    },
+    "Karanlık Mod" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dark Mode"
+          }
+        }
+      }
+    },
+    "Kaydet" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "Kendi Tariflerim" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Recipes"
+          }
+        }
+      }
+    },
+    "Kendi tariflerinizdeki tüm kahve tarifleri silinecek." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All coffee recipes will be deleted."
+          }
+        }
+      }
+    },
+    "latte_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25-30 seconds"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25-30 saniye"
+          }
+        }
+      }
+    },
+    "latte_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extract 36ml espresso from 18g coffee. Add 180ml steamed milk or milk foam prepared with a steam wand."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "18gr kahveden 36ml espresso elde edin. 180ml ısıtılmış sütü veya buhar çubuğuyla hazırladığınız süt kremasını ekleyerek hazırlayın."
+          }
+        }
+      }
+    },
+    "latte_macchiato_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 seconds"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 saniye"
+          }
+        }
+      }
+    },
+    "latte_macchiato_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pour 200ml heated milk into a large glass, then slowly add the espresso to make a latte macchiato. The layers will be distinct."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Büyük bir bardağa 200ml ısıtılmış süt dökün, ardından yavaşça espresso ekleyerek latte macchiato hazırlayın. Katmanlar belirgin olacaktır."
+          }
+        }
+      }
+    },
+    "latte_macchiato_water_amount" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso, 200ml milk (lots of foam)"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso, 200ml süt(bol köpük)"
+          }
+        }
+      }
+    },
+    "latte_water_amount" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso, 180ml milk/cream"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso,180ml süt/süt kreması"
+          }
+        }
+      }
+    },
+    "marocchino_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25-30 seconds"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25-30 saniye"
+          }
+        }
+      }
+    },
+    "marocchino_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add hot chocolate or cocoa to the bottom of the glass. Add espresso and a thin layer of milk foam on top. Optionally, add grated chocolate on top."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bardağın tabanına sıcak çikolata ya da kakao ekleyin. Üzerine espresso ve ince bir süt köpüğü ekleyin. İsteğe bağlı en üste rendelenmiş çikolata ekleyebilirsiniz."
+          }
+        }
+      }
+    },
+    "marocchino_water_amount" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso, 20ml milk foam"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso,20ml süt köpüğü"
+          }
+        }
+      }
+    },
+    "ml" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ml"
+          }
+        }
+      }
+    },
+    "mocha_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 seconds"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espresso: 25-30 saniye"
+          }
+        }
+      }
+    },
+    "mocha_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extract 36ml espresso from 18g coffee. Add 20g chocolate syrup or melted chocolate to the espresso, then add 150ml heated milk. Optionally, add whipped cream."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "18gr kahveden 36ml espresso elde edin. Espressoya 20gr çikolata şurubu ya da eritilmiş çikolata ekleyin, ardından 150ml ısıtılmış süt ilave edin. İsteğe bağlı süt kreması ekleyin."
+          }
+        }
+      }
+    },
+    "mocha_water_amount" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso, 150ml milk"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "36ml espresso, 150ml süt"
+          }
+        }
+      }
+    },
+    "Moka Pot Ayarları" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moka Pot Settings"
+          }
+        }
+      }
+    },
+    "Notlar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notes"
+          }
+        }
+      }
+    },
+    "Öğütücü" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grinder"
+          }
+        }
+      }
+    },
+    "Öğütücü Ayarı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grinder Settings"
+          }
+        }
+      }
+    },
+    "Öğütücü ayarı girin" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Write the Grinder Setting"
+          }
+        }
+      }
+    },
+    "Öğütücü ayarını giriniz" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter Grinder Setting"
+          }
+        }
+      }
+    },
+    "Öğütücü: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grinder: %@"
+          }
+        }
+      }
+    },
+    "Oran" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ratio"
+          }
+        }
+      }
+    },
+    "Pour Over Ayarları" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pour Over Sttings"
+          }
+        }
+      }
+    },
+    "ristretto_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "20-25 seconds"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "20-25 saniye"
+          }
+        }
+      }
+    },
+    "ristretto_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extract 20ml ristretto from 18g coffee using less water than a regular espresso. A more intense and aromatic shot..."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "18gr kahveden, normal espressoya göre daha az su kullanarak 20ml ristretto elde edin. Daha yoğun ve aromatik bir shot..."
+          }
+        }
+      }
+    },
+    "ristretto_water_amount" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "20ml"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "20ml"
+          }
+        }
+      }
+    },
+    "Sil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
+    "Sıfırla" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset"
+          }
+        }
+      }
+    },
+    "Su Miktarı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Water Amount"
+          }
+        }
+      }
+    },
+    "Su Miktarı (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Water Amount (%@)"
+          }
+        }
+      }
+    },
+    "Su Sıcaklığı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Water Temp"
+          }
+        }
+      }
+    },
+    "Su Sıcaklığı:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Water Temp:"
+          }
+        }
+      }
+    },
+    "Su Sıcaklığı: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Water Temp: %@"
+          }
+        }
+      }
+    },
+    "Su Sıcaklığı: %lld%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WAter Temp: %1$lld%2$@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Su Sıcaklığı: %1$lld%2$@"
+          }
+        }
+      }
+    },
+    "Su:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Water:"
+          }
+        }
+      }
+    },
+    "Su: %@ %@, Oran: 1/%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Water: %1$@ %2$@, Ratio: 1/%3$lld"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Su: %1$@ %2$@, Oran: 1/%3$lld"
+          }
+        }
+      }
+    },
+    "Süre: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time: %@"
+          }
+        }
+      }
+    },
+    "Sürüm: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "version: %@"
+          }
+        }
+      }
+    },
+    "Syphon Ayarları" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Syphon Settings"
+          }
+        }
+      }
+    },
+    "Talimatlar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instructions"
+          }
+        }
+      }
+    },
+    "Tamam" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "Tarif Adı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipe Name"
+          }
+        }
+      }
+    },
+    "Tarif adını giriniz" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Write the Recipe Name"
+          }
+        }
+      }
+    },
+    "Tarif Bilgileri" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipe Information"
+          }
+        }
+      }
+    },
+    "Tarifi Düzenle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Recipe"
+          }
+        }
+      }
+    },
+    "Tarifi Kaydet" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save Recipe"
+          }
+        }
+      }
+    },
+    "Tarifleri Yönet" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage Recipes"
+          }
+        }
+      }
+    },
+    "turkish_coffee_brew_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3-5 minutes"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3-5 dakika"
+          }
+        }
+      }
+    },
+    "turkish_coffee_instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Place 7g of finely ground coffee in a cezve (Turkish coffee pot), add 70ml water (and sugar if desired). Brew slowly over low heat without stirring. Remove from heat when foam forms on top."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İnce öğütülmüş 7gr kahveyi cezveye koyun, 70ml su (isteğe bağlı şeker) ekleyin. Kısık ateşte yavaşça pişirin ve karıştırmayın. Köpük oluşunca cezveyi ocaktan alın."
+          }
+        }
+      }
+    },
+    "turkish_coffee_name" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turkish Coffee"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Türk Kahvesi"
+          }
+        }
+      }
+    },
+    "weekly_recipe_body" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This week's recipe: %@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu haftanın tarifi: %@"
+          }
+        }
+      }
+    },
+    "weekly_recipe_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weekly Recipe Suggestion"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haftalık Tarif Önerisi"
+          }
+        }
+      }
+    },
+    "Yeni Tarif Ekle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add New Recipe"
+          }
+        }
+      }
+    }
   },
   "version" : "1.0"
 }
