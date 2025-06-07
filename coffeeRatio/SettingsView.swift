@@ -6,6 +6,7 @@ struct SettingsView: View {
     @EnvironmentObject var settings: SettingsModel
     @EnvironmentObject var recipeStore: CustomRecipeStore
     @State private var showDeleteAlert = false
+    @State private var showPremiumSheet = false
 
     let unitOptions = ["Metric", "Imperial"]
 
@@ -44,11 +45,24 @@ struct SettingsView: View {
                         Text("Bu uygulama, çeşitli kahve tarifleri ve demleme yöntemlerini öğrenmenizi,kaydetmenizi sağlar.")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
-                        // Versiyon satırı eklendi:
                         Text("Sürüm: \(appVersion)")
                             .font(.footnote)
                             .foregroundColor(.secondary)
                             .padding(.top, 4)
+                    }
+                }
+
+                // En alta Premium'a Geç bölümü eklendi
+                Section {
+                    Button(action: {
+                        showPremiumSheet = true
+                    }) {
+                        HStack {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.yellow)
+                            Text("Premium’a Geç")
+                                .foregroundColor(.primary)
+                        }
                     }
                 }
             }
@@ -64,7 +78,39 @@ struct SettingsView: View {
                     secondaryButton: .cancel()
                 )
             }
+            .sheet(isPresented: $showPremiumSheet) {
+                PremiumInfoView()
+            }
         }
+    }
+}
+
+// Basit bir PremiumInfoView, ileride gerçek StoreKit ekranı ile değiştirilebilir.
+struct PremiumInfoView: View {
+    @Environment(\.dismiss) var dismiss
+    var body: some View {
+        VStack(spacing: 24) {
+            Image(systemName: "star.fill")
+                .resizable()
+                .frame(width: 60, height: 60)
+                .foregroundColor(.yellow)
+                .padding(.top)
+
+            Text("CoffeeRatio Premium")
+                .font(.title)
+                .fontWeight(.bold)
+
+            Text("• Sınırsız tarif kaydı\n• Tüm gelecekteki premium özelliklere ücretsiz erişim\n\nYakında burada!")
+                .multilineTextAlignment(.center)
+                .foregroundColor(.secondary)
+
+            Button("Kapat") {
+                dismiss()
+            }
+            .padding(.top, 8)
+        }
+        .padding()
+        .presentationDetents([.medium])
     }
 }
 

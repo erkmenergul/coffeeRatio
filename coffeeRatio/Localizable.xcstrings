@@ -80,6 +80,16 @@
         }
       }
     },
+    "• Sınırsız tarif kaydı\n• Tüm gelecekteki premium özelliklere ücretsiz erişim\n\nYakında burada!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• Unlimited recipe saves\n• Free access to all future premium features\n\nComing soon!"
+          }
+        }
+      }
+    },
     "1/10" : {
       "localizations" : {
         "en" : {
@@ -458,6 +468,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chemex Settings"
+          }
+        }
+      }
+    },
+    "CoffeeRatio Premium" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CoffeeRatio Premium"
           }
         }
       }
@@ -922,6 +942,16 @@
         }
       }
     },
+    "Kapat" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        }
+      }
+    },
     "Karanlık Mod" : {
       "localizations" : {
         "en" : {
@@ -1250,6 +1280,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pour Over Sttings"
+          }
+        }
+      }
+    },
+    "Premium’a Geç" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Switch to Premium"
           }
         }
       }
