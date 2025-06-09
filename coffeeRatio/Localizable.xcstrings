@@ -80,16 +80,6 @@
         }
       }
     },
-    "• Sınırsız tarif kaydı\n• Tüm gelecekteki premium özelliklere ücretsiz erişim\n\nYakında burada!" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "• Unlimited recipe saves\n• Free access to all future premium features\n\nComing soon!"
-          }
-        }
-      }
-    },
     "1/10" : {
       "localizations" : {
         "en" : {
@@ -197,7 +187,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bir top vanilyalı dondurmanın üzerine sıcak espressoyu dökün."
+            "value" : "Bir top vanilyalı dondurmanın üzerine sıcak espresso ekleyin"
           }
         }
       }
@@ -245,7 +235,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Öncelikle 18gr kahveden 36ml espresso elde edin. Ardından 90ml sıcak su ekleyerek Americano hazırlayın. İstediğiniz sertlik oranına göre ekleyeceğiniz su oranını ayarlayın."
+            "value" : "Öncelikle 18g kahveden 36ml espresso elde edin. Ardından 90ml sıcak su ekleyerek Americano hazırlayın. İstediğiniz sertlik oranına göre ekleyeceğiniz su oranını ayarlayın."
           }
         }
       }
@@ -393,7 +383,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "18gr kahveden 36ml espresso elde edin. Eşit oranlarda 50ml ısıtılmış süt ve süt köpüğünü ekleyerek hazırlayın."
+            "value" : "18g kahveden 36ml espresso elde edin. Eşit oranlarda 50ml ısıtılmış süt ve süt köpüğünü ekleyerek hazırlayın."
           }
         }
       }
@@ -509,7 +499,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "18gr kahveden 36ml espresso elde edin. Ardından 36ml ısıtılmış süt ekleyerek hazırlayın."
+            "value" : "18g kahveden 36ml espresso elde edin. Ardından 36ml ısıtılmış süt ekleyerek hazırlayın."
           }
         }
       }
@@ -621,13 +611,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Grind the coffee to a fine thickness. Place 18gr of coffee into the portafilter of your machine and extract 36ml of espresso in 25-30 seconds."
+            "value" : "Grind the coffee to a fine thickness. Place 18g of coffee into the portafilter of your machine and extract 36ml of espresso in 25-30 seconds."
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kahveyi ince kalınlıkta öğütün. 18gr kahveyi makinenizin portafiltresine yerleştirin ve 25-30 saniyede 36ml espresso elde edin."
+            "value" : "Kahveyi ince kalınlıkta öğütün. 18g kahveyi makinenizin portafiltresine yerleştirin ve 25-30 saniyede 36ml espresso elde edin."
           }
         }
       }
@@ -659,7 +649,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "18gr kahveden 36ml espresso elde edin. Üzerine az miktarda (1-2 kaşık) süt köpüğü ekleyerek espresso macchiato hazırlayın."
+            "value" : "18g kahveden 36ml espresso elde edin. Üzerine az miktarda (1-2 kaşık) süt köpüğü ekleyerek espresso macchiato hazırlayın."
           }
         }
       }
@@ -707,7 +697,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Orta kalınlıkta öğütülmüş 15gr kahveyi filtreye koyun. Makinenizi çalıştırın. 2 ya da 3 kişilik yapmak isterseniz kahve miktarının yaklaşık 15 katı kadar su ilave edin."
+            "value" : "Orta kalınlıkta öğütülmüş 15g kahveyi filtreye koyun. Makinenizi çalıştırın. 2 ya da 3 kişilik yapmak isterseniz kahve miktarının yaklaşık 15 katı kadar su ilave edin."
           }
         }
       }
@@ -755,7 +745,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "18gr kahveden 36ml espresso elde edin. Ardından 120ml ısıtılmış süt ekleyerek hazırlayın."
+            "value" : "18g kahveden 36ml espresso elde edin. Ardından 120ml ısıtılmış süt ekleyerek hazırlayın."
           }
         }
       }
@@ -831,7 +821,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "gr"
+            "value" : "g"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "g"
           }
         }
       }
@@ -1019,7 +1015,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "18gr kahveden 36ml espresso elde edin. 180ml ısıtılmış sütü veya buhar çubuğuyla hazırladığınız süt kremasını ekleyerek hazırlayın."
+            "value" : "18g kahveden 36ml espresso elde edin. 180ml ısıtılmış sütü veya buhar çubuğuyla hazırladığınız süt kremasını ekleyerek hazırlayın."
           }
         }
       }
@@ -1279,7 +1275,17 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pour Over Sttings"
+            "value" : "Pour Over Settings"
+          }
+        }
+      }
+    },
+    "Premium Aktif! 🎉" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium coffeeRatio Member🎉"
           }
         }
       }
@@ -1290,6 +1296,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Upgrade to Premium"
+          }
+        }
+      }
+    },
+    "purchase_not_found" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No previous purchase found."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Satın alma bulunamadı."
           }
         }
       }
@@ -1321,7 +1343,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "18gr kahveden, normal espressoya göre daha az su kullanarak 20ml ristretto elde edin. Daha yoğun ve aromatik bir shot..."
+            "value" : "18g kahveden, normal espressoya göre daha az su kullanarak 20ml ristretto elde edin. Daha yoğun ve aromatik bir shot..."
           }
         }
       }
@@ -1342,6 +1364,26 @@
         }
       }
     },
+    "Satın Al (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purchase (%@)"
+          }
+        }
+      }
+    },
+    "Satın Alımı Geri Yükle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore Purchase"
+          }
+        }
+      }
+    },
     "Sil" : {
       "localizations" : {
         "en" : {
@@ -1358,6 +1400,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reset"
+          }
+        }
+      }
+    },
+    "Sınırsız tarif kaydı\nTüm gelecekteki premium özelliklere ücretsiz erişim" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unlimited recipe saves\nFree access to all future premium features."
           }
         }
       }
@@ -1417,7 +1469,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "WAter Temp: %1$lld%2$@"
+            "value" : "Water Temp: %1$lld%2$@"
           }
         },
         "tr" : {
@@ -1499,7 +1551,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "OK"
+            "value" : "Ok"
           }
         }
       }
@@ -1591,7 +1643,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İnce öğütülmüş 7gr kahveyi cezveye koyun, 70ml su (isteğe bağlı şeker) ekleyin. Kısık ateşte yavaşça pişirin ve karıştırmayın. Köpük oluşunca cezveyi ocaktan alın."
+            "value" : "İnce öğütülmüş 7g kahveyi cezveye koyun, 70ml su (isteğe bağlı şeker) ekleyin. Kısık ateşte yavaşça pişirin ve karıştırmayın. Köpük oluşunca cezveyi ocaktan alın."
           }
         }
       }
@@ -1608,6 +1660,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Türk Kahvesi"
+          }
+        }
+      }
+    },
+    "Ürünler Yükleniyor…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading…"
           }
         }
       }

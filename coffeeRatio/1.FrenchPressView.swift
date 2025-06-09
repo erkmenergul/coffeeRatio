@@ -6,6 +6,7 @@ struct FrenchPressView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var recipeStore: CustomRecipeStore
     @EnvironmentObject var settings: SettingsModel
+    @EnvironmentObject var store: StoreManager  // Premium kontrolü için eklendi
 
     // Varsayılan tarif bilgisi
     let recipe: CoffeeRecipe = coffeeRecipes.first { $0.name == "French Press" } ?? CoffeeRecipe(
@@ -30,6 +31,7 @@ struct FrenchPressView: View {
     @State private var showSettings = false
     @State private var showSaveRecipeSheet = false
     @State private var customRecipeName = ""
+    @State private var showPremiumSheet = false      // Premium ekranı için eklendi
 
     // Timer state'leri
     @State private var remainingTime: TimeInterval = 240
@@ -119,8 +121,14 @@ struct FrenchPressView: View {
 
                 Divider()
 
-                // Kaydet butonu
-                Button { showSaveRecipeSheet = true } label: {
+                // Kaydet butonu (PREMIUM KONTROLLÜ)
+                Button {
+                    if store.isPurchased {
+                        showSaveRecipeSheet = true
+                    } else {
+                        showPremiumSheet = true
+                    }
+                } label: {
                     Text("Bu Tarifi Kaydet")
                         .font(.subheadline)
                         .frame(maxWidth: .infinity)
@@ -145,7 +153,6 @@ struct FrenchPressView: View {
                             ToolbarItem(placement: .navigationBarTrailing) {
                                 Button("Kaydet") {
                                     let brew = timeString(from: brewingTime)
-                                    // Notlar kısmı artık boş
                                     let newRecipe = CustomCoffeeRecipe(
                                         id: UUID(),
                                         name: customRecipeName,
@@ -165,6 +172,9 @@ struct FrenchPressView: View {
                     }
                     .environmentObject(recipeStore)
                     .environmentObject(settings)
+                }
+                .sheet(isPresented: $showPremiumSheet) {
+                    PremiumInfoView()
                 }
 
                 Divider()
@@ -260,5 +270,6 @@ struct FrenchPressView_Previews: PreviewProvider {
         FrenchPressView()
             .environmentObject(CustomRecipeStore())
             .environmentObject(SettingsModel())
+            .environmentObject(StoreManager())
     }
 }

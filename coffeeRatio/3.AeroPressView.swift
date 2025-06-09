@@ -6,6 +6,7 @@ struct AeroPressView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var recipeStore: CustomRecipeStore
     @EnvironmentObject var settings: SettingsModel
+    @EnvironmentObject var store: StoreManager               // Premium kontrolü için eklendi
 
     // Default recipe
     let recipe: CoffeeRecipe = coffeeRecipes.first { $0.name == "AeroPress" } ?? CoffeeRecipe(
@@ -30,6 +31,7 @@ struct AeroPressView: View {
     @State private var showSettings = false
     @State private var showSaveRecipeSheet = false
     @State private var customRecipeName = ""
+    @State private var showPremiumSheet = false           // Premium ekranı için eklendi
 
     // Timer state
     @State private var remainingTime: TimeInterval = 120
@@ -111,8 +113,14 @@ struct AeroPressView: View {
 
                 Divider()
 
-                // Save recipe button
-                Button { showSaveRecipeSheet = true } label: {
+                // Save recipe button (PREMIUM KONTROLLÜ)
+                Button {
+                    if store.isPurchased {
+                        showSaveRecipeSheet = true
+                    } else {
+                        showPremiumSheet = true
+                    }
+                } label: {
                     Text("Bu Tarifi Kaydet")
                         .font(.subheadline)
                         .frame(maxWidth: .infinity)
@@ -156,6 +164,9 @@ struct AeroPressView: View {
                     }
                     .environmentObject(recipeStore)
                     .environmentObject(settings)
+                }
+                .sheet(isPresented: $showPremiumSheet) {
+                    PremiumInfoView()
                 }
 
                 Divider()
@@ -256,5 +267,6 @@ struct AeroPressView_Previews: PreviewProvider {
         AeroPressView()
             .environmentObject(CustomRecipeStore())
             .environmentObject(SettingsModel())
+            .environmentObject(StoreManager())
     }
 }

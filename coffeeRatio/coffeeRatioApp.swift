@@ -6,12 +6,14 @@ import SwiftUI
 struct CoffeeRatioApp: App {
     @StateObject private var recipeStore = CustomRecipeStore()
     @StateObject private var settings    = SettingsModel()
+    @StateObject private var store       = StoreManager() // <-- StoreManager eklendi
 
     var body: some Scene {
         WindowGroup {
             MainTabView()
                 .environmentObject(recipeStore)
                 .environmentObject(settings)
+                .environmentObject(store) // <-- StoreManager'ı environment olarak ekle
                 // Tema ayarı
                 .preferredColorScheme(settings.darkModeEnabled ? .dark : .light)
                 .onAppear {

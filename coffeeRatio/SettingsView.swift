@@ -88,6 +88,8 @@ struct SettingsView: View {
 // Basit bir PremiumInfoView, ileride gerçek StoreKit ekranı ile değiştirilebilir.
 struct PremiumInfoView: View {
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var store: StoreManager
+    
     var body: some View {
         VStack(spacing: 24) {
             Image(systemName: "star.fill")
@@ -95,22 +97,45 @@ struct PremiumInfoView: View {
                 .frame(width: 60, height: 60)
                 .foregroundColor(.yellow)
                 .padding(.top)
-
+            
             Text("CoffeeRatio Premium")
                 .font(.title)
                 .fontWeight(.bold)
-
-            Text("• Sınırsız tarif kaydı\n• Tüm gelecekteki premium özelliklere ücretsiz erişim\n\nYakında burada!")
+            
+            Text("Sınırsız tarif kaydı\nTüm gelecekteki premium özelliklere ücretsiz erişim")
                 .multilineTextAlignment(.center)
                 .foregroundColor(.secondary)
-
+            
+            if store.isPurchased {
+                Text("Premium Aktif! 🎉")
+                    .foregroundColor(.green)
+            } else if let product = store.products.first {
+                Button("Satın Al (\(product.displayPrice))") {
+                    Task {
+                        await store.purchase(product)
+                    }
+                }
+                .buttonStyle(.borderedProminent)
+                
+                Button("Satın Alımı Geri Yükle") {
+                    Task {
+                        await store.restore()
+                    }
+                }
+                .padding(.top, 4)
+            } else {
+                ProgressView("Ürünler Yükleniyor…")
+            }
+            
             Button("Kapat") {
                 dismiss()
             }
-            .padding(.top, 8)
+            .padding(.top)
         }
         .padding()
-        .presentationDetents([.medium])
+        .alert(isPresented: $store.restoreAlert) {        // ---- EKLENEN SATIR
+            Alert(title: Text(store.restoreAlertMessage))
+        }
     }
 }
 

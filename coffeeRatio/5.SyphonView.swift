@@ -5,6 +5,7 @@ import SwiftUI
 struct SyphonView: View {
     @EnvironmentObject var recipeStore: CustomRecipeStore
     @EnvironmentObject var settings: SettingsModel
+    @EnvironmentObject var store: StoreManager          // Premium kontrolü için eklendi
 
     // Default recipe
     let recipe: CoffeeRecipe = coffeeRecipes.first { $0.name == "Syphon" } ?? CoffeeRecipe(
@@ -29,6 +30,7 @@ struct SyphonView: View {
     @State private var showSettings = false
     @State private var showSaveRecipeSheet = false
     @State private var customRecipeName = ""
+    @State private var showPremiumSheet = false         // Premium ekranı için eklendi
 
     // Timer vars
     @State private var remainingTime: TimeInterval = 210
@@ -121,8 +123,14 @@ struct SyphonView: View {
 
                 Divider()
 
-                // Save recipe button
-                Button { showSaveRecipeSheet = true } label: {
+                // Save recipe button (PREMIUM KONTROLLÜ)
+                Button {
+                    if store.isPurchased {
+                        showSaveRecipeSheet = true
+                    } else {
+                        showPremiumSheet = true
+                    }
+                } label: {
                     Text("Bu Tarifi Kaydet")
                         .font(.subheadline)
                         .frame(maxWidth: .infinity)
@@ -166,6 +174,9 @@ struct SyphonView: View {
                     }
                     .environmentObject(recipeStore)
                     .environmentObject(settings)
+                }
+                .sheet(isPresented: $showPremiumSheet) {
+                    PremiumInfoView()
                 }
 
                 Divider()
@@ -262,5 +273,6 @@ struct SyphonView_Previews: PreviewProvider {
         SyphonView()
             .environmentObject(CustomRecipeStore())
             .environmentObject(SettingsModel())
+            .environmentObject(StoreManager())
     }
 }

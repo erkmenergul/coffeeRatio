@@ -6,6 +6,7 @@ struct PourOverView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var recipeStore: CustomRecipeStore
     @EnvironmentObject var settings: SettingsModel
+    @EnvironmentObject var store: StoreManager          // Premium kontrolü için eklendi
 
     // Default recipe info
     let recipe: CoffeeRecipe = coffeeRecipes.first { $0.name == "Pour Over (V60)" }
@@ -31,6 +32,7 @@ struct PourOverView: View {
     @State private var showSettings = false
     @State private var showSaveRecipeSheet = false
     @State private var customRecipeName = ""
+    @State private var showPremiumSheet = false       // Premium ekranı için eklendi
 
     // Timer vars
     @State private var remainingTime: TimeInterval = 180
@@ -119,8 +121,14 @@ struct PourOverView: View {
 
                 Divider()
 
-                // Kaydet butonu
-                Button { showSaveRecipeSheet = true } label: {
+                // Kaydet butonu (PREMIUM KONTROLLÜ)
+                Button {
+                    if store.isPurchased {
+                        showSaveRecipeSheet = true
+                    } else {
+                        showPremiumSheet = true
+                    }
+                } label: {
                     Text("Bu Tarifi Kaydet")
                         .font(.subheadline)
                         .frame(maxWidth: .infinity)
@@ -164,6 +172,9 @@ struct PourOverView: View {
                     }
                     .environmentObject(recipeStore)
                     .environmentObject(settings)
+                }
+                .sheet(isPresented: $showPremiumSheet) {
+                    PremiumInfoView()
                 }
 
                 Divider()
@@ -260,5 +271,6 @@ struct PourOverView_Previews: PreviewProvider {
         PourOverView()
             .environmentObject(CustomRecipeStore())
             .environmentObject(SettingsModel())
+            .environmentObject(StoreManager())
     }
 }

@@ -5,8 +5,10 @@ import SwiftUI
 struct MyCustomRecipesView: View {
     @EnvironmentObject var recipeStore: CustomRecipeStore
     @EnvironmentObject var settings: SettingsModel
+    @EnvironmentObject var store: StoreManager        // Premium kontrolü için eklendi
     @State private var showingAddRecipe = false
     @State private var customTemperature: Int = 94
+    @State private var showPremiumSheet = false       // Premium ekranı için eklendi
 
     var body: some View {
         NavigationView {
@@ -34,7 +36,13 @@ struct MyCustomRecipesView: View {
             .navigationTitle("Kendi Tariflerim")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { showingAddRecipe = true }) {
+                    Button(action: {
+                        if store.isPurchased {
+                            showingAddRecipe = true
+                        } else {
+                            showPremiumSheet = true
+                        }
+                    }) {
                         Image(systemName: "plus")
                     }
                 }
@@ -46,6 +54,9 @@ struct MyCustomRecipesView: View {
                 )
                 .environmentObject(settings)
             }
+            .sheet(isPresented: $showPremiumSheet) {
+                PremiumInfoView()          // Premium ekranını açar
+            }
         }
     }
 }
@@ -55,5 +66,6 @@ struct MyCustomRecipesView_Previews: PreviewProvider {
         MyCustomRecipesView()
             .environmentObject(SettingsModel())
             .environmentObject(CustomRecipeStore())
+            .environmentObject(StoreManager())
     }
 }

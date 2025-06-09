@@ -6,6 +6,7 @@ struct ChemexView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var recipeStore: CustomRecipeStore
     @EnvironmentObject var settings: SettingsModel
+    @EnvironmentObject var store: StoreManager               // Premium kontrolü için eklendi
 
     // Default recipe
     let recipe: CoffeeRecipe = coffeeRecipes.first { $0.name == "Chemex" } ?? CoffeeRecipe(
@@ -30,6 +31,7 @@ struct ChemexView: View {
     @State private var showSettings = false
     @State private var showSaveRecipeSheet = false
     @State private var customRecipeName = ""
+    @State private var showPremiumSheet = false           // Premium ekranı için eklendi
 
     // Timer vars
     @State private var remainingTime: TimeInterval = 180
@@ -126,8 +128,14 @@ struct ChemexView: View {
 
                 Divider()
 
-                // Save recipe button
-                Button { showSaveRecipeSheet = true } label: {
+                // Save recipe button (PREMIUM KONTROLLÜ)
+                Button {
+                    if store.isPurchased {
+                        showSaveRecipeSheet = true
+                    } else {
+                        showPremiumSheet = true
+                    }
+                } label: {
                     Text("Bu Tarifi Kaydet")
                         .font(.subheadline)
                         .frame(maxWidth: .infinity)
@@ -174,7 +182,48 @@ struct ChemexView: View {
                     .environmentObject(recipeStore)
                     .environmentObject(settings)
                 }
+                .sheet(isPresented: $showPremiumSheet) {
+                    PremiumInfoView()
+                }
+                Divider()
 
+                // Countdown timer
+                VStack(alignment: .leading, spacing: 4) {
+                    HStack {
+                        Text("Geri Sayım:").font(.title2)
+                        Spacer()
+                        Text(timeString(from: remainingTime)).font(.title2)
+                    }
+                    HStack(spacing: 12) {
+                        Button { timerStarted ? stopTimer() : startTimer() } label: {
+                            HStack {
+                                Spacer()
+                                Text(timerStarted ? "Durdur" : (remainingTime < brewingTime ? "Devam et" : "Başlat"))
+                                    .foregroundColor(.white)
+                                    .font(.body)
+                                Spacer()
+                            }
+                            .padding(8)
+                            .background(timerStarted ? Color.red : Color.green)
+                            .cornerRadius(8)
+                        }
+                        Button {
+                            stopTimer()
+                            remainingTime = brewingTime
+                        } label: {
+                            HStack {
+                                Spacer()
+                                Text("Sıfırla").foregroundColor(.white).font(.body)
+                                Spacer()
+                            }
+                            .padding(8)
+                            .background(Color.gray)
+                            .cornerRadius(8)
+                        }
+                    }
+                    .padding(.horizontal)
+                    .padding(.vertical, 4)
+                }
                 Divider()
 
                 // Instructions & steps
@@ -235,5 +284,6 @@ struct ChemexView_Previews: PreviewProvider {
         ChemexView()
             .environmentObject(CustomRecipeStore())
             .environmentObject(SettingsModel())
+            .environmentObject(StoreManager())
     }
 }
