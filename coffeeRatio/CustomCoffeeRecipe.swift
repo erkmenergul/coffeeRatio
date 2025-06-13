@@ -83,4 +83,9 @@ class CustomRecipeStore: ObservableObject {
     func delete(recipe: CustomCoffeeRecipe) {
         recipes.removeAll { $0.id == recipe.id }
     }
+
+    /// Move (reorder) recipes
+    func move(from source: IndexSet, to destination: Int) {
+        recipes.move(fromOffsets: source, toOffset: destination)
+    }
 }

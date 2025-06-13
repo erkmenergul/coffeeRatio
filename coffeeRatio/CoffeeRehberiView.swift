@@ -52,7 +52,7 @@ struct CoffeeRehberiView: View {
                     .padding(.vertical, 4)
                 }
             }
-            .navigationTitle("Kahve Rehberi")
+            .navigationTitle("Tarifler")
             .listStyle(PlainListStyle())
         }
     }

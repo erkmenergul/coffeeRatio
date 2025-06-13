@@ -1,6 +1,7 @@
 //  CustomCoffeeRecipeDetailView.swift
 
 import SwiftUI
+import UIKit
 
 struct CustomCoffeeRecipeDetailView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -16,7 +17,6 @@ struct CustomCoffeeRecipeDetailView: View {
     @State private var timerStarted = false
     @State private var countdownTimer: Timer? = nil
 
-    // Access the latest recipe data
     var currentRecipe: CustomCoffeeRecipe {
         recipeStore.recipes.first { $0.id == recipe.id } ?? recipe
     }
@@ -29,13 +29,11 @@ struct CustomCoffeeRecipeDetailView: View {
             : rawTemp
         let tempUnit = settings.selectedUnit == "Imperial" ? "°F" : "°C"
 
-        // Strip non-numeric characters for conversion
         func numericValue(from str: String) -> Double? {
             let filtered = str.replacingOccurrences(of: "[^0-9.]", with: "", options: .regularExpression)
             return Double(filtered)
         }
 
-        // Prepare coffee & water display
         let coffeeValRaw = currentRecipe.coffeeAmount
         let waterValRaw  = currentRecipe.waterAmount
 
@@ -77,12 +75,12 @@ struct CustomCoffeeRecipeDetailView: View {
                 // Coffee & Water display
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("Kahve Miktarı").font(.headline)
+                        Text("coffee_amount").font(.headline)
                         Text(coffeeDisplay)
                     }
                     Spacer()
                     VStack(alignment: .leading) {
-                        Text("Su Miktarı").font(.headline)
+                        Text("water_amount").font(.headline)
                         Text(waterDisplay)
                     }
                 }
@@ -90,12 +88,12 @@ struct CustomCoffeeRecipeDetailView: View {
                 // Brew Time and Temperature
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("Demleme Süresi").font(.headline)
+                        Text("brew_time").font(.headline)
                         Text(currentRecipe.brewTime)
                     }
                     Spacer()
                     VStack(alignment: .leading) {
-                        Text("Su Sıcaklığı").font(.headline)
+                        Text("water_temp").font(.headline)
                         Text("\(displayTemp)\(tempUnit)")
                     }
                 }
@@ -103,7 +101,7 @@ struct CustomCoffeeRecipeDetailView: View {
                 // Grinder setting
                 if !currentRecipe.grinderSetting.isEmpty {
                     VStack(alignment: .leading) {
-                        Text("Öğütücü").font(.headline)
+                        Text("grinder_setting").font(.headline)
                         Text(currentRecipe.grinderSetting)
                     }
                 }
@@ -111,10 +109,11 @@ struct CustomCoffeeRecipeDetailView: View {
                 // Countdown timer
                 VStack(alignment: .leading, spacing: 8) {
                     HStack {
-                        Text("Geri Sayım:").font(.title2)
+                        Text("countdown").font(.title2)
                         Spacer()
                         Text(timeString(from: remainingTime)).font(.title2)
                     }
+                    .padding(.horizontal, 16)
                     HStack(spacing: 12) {
                         Button {
                             timerStarted ? stopTimer() : startTimer(initial: initialTime)
@@ -122,8 +121,8 @@ struct CustomCoffeeRecipeDetailView: View {
                             HStack {
                                 Spacer()
                                 Text(timerStarted
-                                    ? "Durdur"
-                                    : (remainingTime < initialTime ? "Devam et" : "Başlat"))
+                                    ? NSLocalizedString("stop", comment: "")
+                                    : (remainingTime < initialTime ? NSLocalizedString("resume", comment: "") : NSLocalizedString("start", comment: "")))
                                     .foregroundColor(.white)
                                 Spacer()
                             }
@@ -137,7 +136,7 @@ struct CustomCoffeeRecipeDetailView: View {
                         } label: {
                             HStack {
                                 Spacer()
-                                Text("Sıfırla").foregroundColor(.white)
+                                Text("reset").foregroundColor(.white)
                                 Spacer()
                             }
                             .padding(8)
@@ -145,16 +144,31 @@ struct CustomCoffeeRecipeDetailView: View {
                             .cornerRadius(8)
                         }
                     }
+                    .padding(.horizontal, 16)
                 }
                 .padding(.vertical)
 
                 // User notes
                 if !currentRecipe.notes.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Notlar").font(.headline)
+                        Text("notes").font(.headline)
                         Text(currentRecipe.notes)
                             .fixedSize(horizontal: false, vertical: true)
                     }
+                }
+
+                // PAYLAŞ BUTONU
+                Button {
+                    shareRecipe()
+                } label: {
+                    HStack {
+                        Image(systemName: "square.and.arrow.up")
+                        Text(NSLocalizedString("share_recipe", comment: ""))
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color(.systemBlue).opacity(0.12))
+                    .cornerRadius(8)
                 }
 
                 // Delete button
@@ -163,32 +177,29 @@ struct CustomCoffeeRecipeDetailView: View {
                 } label: {
                     HStack {
                         Image(systemName: "trash")
-                        Text("Sil")
+                        Text(NSLocalizedString("delete", comment: ""))
                     }
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(Color(.systemGray6))
                     .cornerRadius(8)
                 }
-                .alert("Bu tarifi silmek istediğinizden emin misiniz?", isPresented: $showingDeleteAlert) {
-                    Button("Sil", role: .destructive) {
+                .alert(NSLocalizedString("delete_confirm", comment: ""), isPresented: $showingDeleteAlert) {
+                    Button(NSLocalizedString("delete", comment: ""), role: .destructive) {
                         recipeStore.delete(recipe: currentRecipe)
                         presentationMode.wrappedValue.dismiss()
                     }
-                    Button("İptal", role: .cancel) { }
+                    Button(NSLocalizedString("cancel", comment: ""), role: .cancel) { }
                 }
-
             }
             .padding()
         }
         .navigationTitle(currentRecipe.name)
-        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(false)
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button("Geri") { presentationMode.wrappedValue.dismiss() }
-            }
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button("Düzenle") { showingEdit = true }
+                Button(NSLocalizedString("edit", comment: "")) { showingEdit = true }
             }
         }
         .sheet(isPresented: $showingEdit) {
@@ -197,6 +208,29 @@ struct CustomCoffeeRecipeDetailView: View {
         }
         .onAppear { remainingTime = initialTime }
         .onDisappear { stopTimer() }
+    }
+
+    // MARK: - Share Function (UIKit ile kesin çalışan)
+
+    private func shareRecipe() {
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(currentRecipe)
+            let uniqueName = "\(currentRecipe.name)_\(UUID().uuidString.prefix(8)).coffeerecipe"
+            let url = FileManager.default.temporaryDirectory.appendingPathComponent(uniqueName)
+            try data.write(to: url)
+            presentShareSheet(with: [url])
+        } catch {
+            // Hata yönetimi (alert vs.)
+        }
+    }
+
+    // UIKit share sheet helper (iOS 15+)
+    private func presentShareSheet(with items: [Any]) {
+        guard let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let root = scene.windows.first?.rootViewController else { return }
+        let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        root.present(activityVC, animated: true)
     }
 
     // MARK: - Timer Functions
@@ -230,4 +264,16 @@ struct CustomCoffeeRecipeDetailView: View {
         }
         return 240
     }
+}
+
+// Share Sheet helper
+struct ActivityViewController: UIViewControllerRepresentable {
+    let activityItems: [Any]
+    let applicationActivities: [UIActivity]? = nil
+
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: activityItems, applicationActivities: applicationActivities)
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }

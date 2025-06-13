@@ -179,13 +179,15 @@ struct FrenchPressView: View {
 
                 Divider()
 
-                // Geri sayım
-                VStack(alignment: .leading, spacing: 4) {
+                // Countdown timer
+                VStack(alignment: .leading, spacing: 8) {
                     HStack {
                         Text("Geri Sayım:").font(.title2)
                         Spacer()
                         Text(timeString(from: remainingTime)).font(.title2)
                     }
+                    .padding(.horizontal, 16) // SOLDAN/SAĞDAN boşluk
+
                     HStack(spacing: 12) {
                         Button { timerStarted ? stopTimer() : startTimer() } label: {
                             HStack {
@@ -213,9 +215,10 @@ struct FrenchPressView: View {
                             .cornerRadius(8)
                         }
                     }
-                    .padding(.horizontal)
+                    .padding(.horizontal, 16) // SOLDAN/SAĞDAN boşluk
                     .padding(.vertical, 4)
                 }
+                .padding(.bottom, 4)
 
                 Divider()
 

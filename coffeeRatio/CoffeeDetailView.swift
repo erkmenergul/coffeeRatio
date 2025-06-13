@@ -169,12 +169,8 @@ struct CoffeeDetailView: View {
             .padding()
         }
         .navigationTitle(recipe.name)
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button("Geri") { presentationMode.wrappedValue.dismiss() }
-            }
-        }
+        .navigationBarBackButtonHidden(false)         // <-- iOS'un kendi başlıklı geri tuşunu gösterir
+        .navigationBarTitleDisplayMode(.inline)       // <-- Bold ve başlıkla gösterir
     }
 
     private func isBrewingMethod(_ name: String) -> Bool {
