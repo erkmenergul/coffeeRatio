@@ -253,6 +253,7 @@ struct PourOverView: View {
             .onAppear { remainingTime = brewingTime }
             .onChange(of: brewingTime) { remainingTime = $0 }
         }
+        .navigationViewStyle(.stack)  // ← iPad’de split yerine stack modu
     }
 
     // Timer functions

@@ -255,6 +255,7 @@ struct MokaPotView: View {
             .onAppear { remainingTime = brewingTime }
             .onChange(of: brewingTime) { remainingTime = $0 }
         }
+        .navigationViewStyle(.stack)  // ← iPad’de split yerine stack modu
     }
 
     private func startTimer() {

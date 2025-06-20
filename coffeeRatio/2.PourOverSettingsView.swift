@@ -124,6 +124,7 @@ struct PourOverSettingsView: View {
                 }
             )
         }
+        .navigationViewStyle(.stack)  // ← iPad’de split yerine stack modu
     }
 }
 

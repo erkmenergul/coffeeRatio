@@ -62,6 +62,7 @@ struct MyCustomRecipesView: View {
                 PremiumInfoView()
             }
         }
+        .navigationViewStyle(.stack)  // ← iPad'de split yerine stack modu
     }
 }
 

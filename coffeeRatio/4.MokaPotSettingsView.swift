@@ -128,6 +128,7 @@ struct MokaPotSettingsView: View {
                 Button("Tamam") { presentationMode.wrappedValue.dismiss() }
             )
         }
+        .navigationViewStyle(.stack)  // ← iPad’de split yerine stack modu
     }
 }
 

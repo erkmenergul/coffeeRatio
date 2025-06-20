@@ -121,6 +121,7 @@ struct SettingsView: View {
                 PremiumInfoView()
             }
         }
+        .navigationViewStyle(.stack)  // ← iPad'de split yerine stack modu
     }
 
     // GERİ BİLDİRİM MAİLİ AÇMA

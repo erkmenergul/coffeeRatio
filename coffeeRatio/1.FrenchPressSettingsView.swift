@@ -164,6 +164,7 @@ struct FrenchPressSettingsView: View {
                 }
             )
         }
+        .navigationViewStyle(.stack)  // ← iPad’de split yerine stack modu
     }
 }
 

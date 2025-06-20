@@ -45,6 +45,7 @@ struct CoffeeListView: View {
             .navigationTitle("Tarifler")
             .listStyle(PlainListStyle())
         }
+        .navigationViewStyle(.stack)  // ← iPad'de split yerine stack modu
     }
 }
 

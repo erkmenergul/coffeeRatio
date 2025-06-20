@@ -28,6 +28,7 @@ struct BrewingMethodsView: View {
             .navigationTitle("Demleme Yöntemleri")
             .listStyle(PlainListStyle())
         }
+        .navigationViewStyle(.stack)  // ← iPad’de split yerine stack modu
     }
     
     // Yardımcı fonksiyon, her demleme yöntemi için ilgili view'ı döndürüyor.
