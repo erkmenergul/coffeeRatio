@@ -1406,6 +1406,23 @@
         }
       }
     },
+    "notifications_disabled_hint" : {
+      "comment" : "Bildirimler kapalı uyarısı",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications disabled"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildirimler kapalı"
+          }
+        }
+      }
+    },
     "Notlar" : {
       "localizations" : {
         "en" : {
@@ -1808,6 +1825,23 @@
         }
       }
     },
+    "suggestion_time" : {
+      "comment" : "Öneri Zamanı",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggestion Time"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öneri Zamanı"
+          }
+        }
+      }
+    },
     "Süre: %@" : {
       "localizations" : {
         "en" : {
@@ -1928,6 +1962,23 @@
         }
       }
     },
+    "time" : {
+      "comment" : "Saat",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tİme"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saat"
+          }
+        }
+      }
+    },
     "turkish_coffee_brew_time" : {
       "localizations" : {
         "en" : {
@@ -2030,6 +2081,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Su Sıcaklığı"
+          }
+        }
+      }
+    },
+    "weekday" : {
+      "comment" : "Gün",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Day"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gün"
           }
         }
       }

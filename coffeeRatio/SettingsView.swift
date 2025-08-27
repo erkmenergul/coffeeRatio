@@ -22,6 +22,20 @@ struct SettingsView: View {
         var id: Int { hashValue }
     }
 
+    // YENİ: Saat seçimi için yardımcı state (yalnızca saat/dakika)
+    @State private var suggestionTime: Date = {
+        var comps = DateComponents()
+        comps.hour = 9
+        comps.minute = 0
+        return Calendar.current.date(from: comps) ?? Date()
+    }()
+
+    // YENİ: Lokalize hafta günleri (1=Pazar ... 7=Cumartesi)
+    private var localizedWeekdays: [String] {
+        var df = DateFormatter()
+        return df.weekdaySymbols
+    }
+
     var body: some View {
         NavigationView {
             Form {
@@ -29,6 +43,59 @@ struct SettingsView: View {
                 Section(header: Text("Genel Ayarlar")) {
                     Toggle("Karanlık Mod", isOn: $settings.darkModeEnabled)
                     Toggle("Bildirimler", isOn: $settings.notificationsEnabled)
+                }
+
+                // YENİ: ÖNERİ ZAMANI
+                Section(header: Text(NSLocalizedString("suggestion_time", comment: "Öneri Zamanı"))) {
+
+                    // Haftanın günü seçimi
+                    Picker(NSLocalizedString("weekday", comment: "Gün"), selection: $settings.notificationWeekday) {
+                        ForEach(1...7, id: \.self) { idx in
+                            Text(localizedWeekdays[idx - 1]).tag(idx)
+                        }
+                    }
+
+                    // Saat/Dakika seçimi
+                    DatePicker(
+                        NSLocalizedString("time", comment: "Saat"),
+                        selection: Binding<Date>(
+                            get: {
+                                var comps = DateComponents()
+                                comps.hour = settings.notificationHour
+                                comps.minute = settings.notificationMinute
+                                return Calendar.current.date(from: comps) ?? suggestionTime
+                            },
+                            set: { newValue in
+                                let comps = Calendar.current.dateComponents([.hour, .minute], from: newValue)
+                                settings.notificationHour = comps.hour ?? 9
+                                settings.notificationMinute = comps.minute ?? 0
+                            }
+                        ),
+                        displayedComponents: .hourAndMinute
+                    )
+
+                    // Değişikliklerde bildirimi yeniden planla
+                    .onChange(of: settings.notificationHour) { _ in
+                        if settings.notificationsEnabled {
+                            NotificationsManager.shared.scheduleWeeklyRecipeSuggestion()
+                        }
+                    }
+                    .onChange(of: settings.notificationMinute) { _ in
+                        if settings.notificationsEnabled {
+                            NotificationsManager.shared.scheduleWeeklyRecipeSuggestion()
+                        }
+                    }
+                    .onChange(of: settings.notificationWeekday) { _ in
+                        if settings.notificationsEnabled {
+                            NotificationsManager.shared.scheduleWeeklyRecipeSuggestion()
+                        }
+                    }
+
+                    if !settings.notificationsEnabled {
+                        Text(NSLocalizedString("notifications_disabled_hint", comment: "Bildirimler kapalı uyarısı"))
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                    }
                 }
 
                 // BİRİM SEÇİMİ
